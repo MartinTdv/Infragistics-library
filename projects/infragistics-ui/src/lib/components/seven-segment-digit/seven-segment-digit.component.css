@@ -1,0 +1,136 @@
+.number {
+	display: block;
+	height: 2rem;
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: 3px 2rem 3px;
+	grid-template-rows: 1fr 1fr;
+}
+
+.bar {
+	background: red;
+}
+
+.barA {
+	grid-column: 1 / 3;
+	grid-row: 1 / 1;
+	height: 3px;
+}
+
+.barB {
+	grid-column: 3 / 4;
+	grid-row: 1 / 1;
+}
+
+.barC {
+	grid-column: 3 / 4;
+	grid-row: 2 / 3;
+}
+
+.barD {
+	grid-column: 1 / 3;
+	grid-row: 3 / 3;
+	height: 3px;
+}
+
+.barE {
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+}
+
+.barF {
+	grid-column: 1 / 2;
+	grid-row: 1 / 1;
+}
+
+.barG {
+	grid-column: 1 / 3;
+	grid-row: 2 / 3;
+	height: 3px;
+}
+
+.number--0 {
+	.barG {
+		background: transparent;
+	}
+}
+
+.number--1 {
+	.barA,
+	.barD,
+	.barE,
+	.barF,
+	.barG {
+		background: transparent;
+	}
+}
+
+.number--2 {
+	.barC,
+	.barF {
+		background: transparent;
+	}
+}
+
+.number--3 {
+	.barE,
+	.barF {
+		background: transparent;
+	}
+}
+
+.number--4 {
+	.barA,
+	.barD,
+	.barE {
+		background: transparent;
+	}
+}
+
+.number--5 {
+	.barB,
+	.barE {
+		background: transparent;
+	}
+}
+
+.number--6 {
+	.barB {
+		background: transparent;
+	}
+}
+
+.number--7 {
+	.barD,
+	.barE,
+	.barF,
+	.barG {
+		background: transparent;
+	}
+}
+
+.number--9 {
+	.barE {
+		background: transparent;
+	}
+}
+
+@media (max-width: 600px) {
+	.number {
+		height: 1rem;
+		padding: 0.5rem;
+		display: grid;
+		grid-template-columns: 2px 1rem 2px;
+		grid-template-rows: 1fr 1fr;
+	}
+}
+
+@media (max-width: 350px) {
+	.number {
+		height: 1rem;
+		padding: 2px;
+		display: grid;
+		grid-template-columns: 2px 1rem 2px;
+		grid-template-rows: 1fr 1fr;
+	}
+}

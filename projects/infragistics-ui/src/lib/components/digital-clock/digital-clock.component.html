@@ -1,0 +1,54 @@
+<div class="container" [ngStyle]="{'background-color': clockColor}">
+    <div class="segment-display">
+  
+      <!-- Segment One -->
+      <ig-digital-segment
+        *ngIf="segmentOneTimeUnit"
+        class="segment"
+        [timeUnit]="segmentOneTimeUnit"
+        [backgroundColor]="backgroundColor"
+        [digitColor]="digitColor">
+      </ig-digital-segment>
+  
+      <!-- Segment Two -->
+      <ig-digital-segment
+        *ngIf="segmentTwoTimeUnit"
+        class="segment"
+        [timeUnit]="segmentTwoTimeUnit"
+        [showSeparator]="true"
+        [backgroundColor]="backgroundColor"
+        [digitColor]="digitColor">
+      </ig-digital-segment>
+  
+      <!-- Segment Three -->
+      <ig-digital-segment
+        *ngIf="segmentThreeTimeUnit"
+        class="segment"
+        [timeUnit]="segmentThreeTimeUnit"
+        [showSeparator]="true"
+        [backgroundColor]="backgroundColor"
+        [digitColor]="digitColor">
+      </ig-digital-segment>
+
+      <!-- AM/PM Segment -->
+      <ig-digital-segment
+        *ngIf="amPmSegmentTimeUnit"
+        class="segment"
+        [timeUnit]="amPmSegmentTimeUnit"
+        [backgroundColor]="backgroundColor"
+        [digitColor]="digitColor">
+      </ig-digital-segment>
+
+      <!--<div *ngIf="amPm" class="segment" [ngStyle]="{'background-color': backgroundColor}" >
+        <div class="am" [ngStyle]="{'color': digitColor}">
+          <span [ngClass]="{'on': amPm === 'am', 'off': amPm === 'pm'}"></span>
+          AM
+        </div>
+        <div class="pm" [ngStyle]="{'color': digitColor}">
+          <span [ngClass]="{'on': amPm === 'pm', 'off': amPm === 'am'}"></span>
+          PM
+        </div>
+      </div>-->
+    </div>
+  </div>
+  

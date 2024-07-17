@@ -1,0 +1,58 @@
+.segment-container {
+    display: flex;
+    align-items: center;
+}
+
+.segment {
+    position: relative;
+    background-color: #280101;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    margin: 10px 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.digits {
+    display: flex;
+    align-items: center;
+    color: #960000;
+    width: 85%;
+}
+
+.am, .pm {
+    font-size: 1.5rem;
+    color: #960000;
+    margin-left: 10px;
+}
+  
+.on, .off {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+  
+.on {
+    background-color: red;
+    box-shadow: 0 0 10px red;
+}
+  
+.off {
+    background-color: black;
+}
+
+@media (max-width: 600px) {
+	.am, .pm {
+        font-size: 1rem;
+    }
+    .on, .off {
+        width: 7.5px;
+        height: 7.5px;
+    }
+}

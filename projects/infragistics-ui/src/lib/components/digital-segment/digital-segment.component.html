@@ -1,0 +1,25 @@
+<!-- To be refactored to have the 7-segment clock design (could reuse ig-seven-segment-digit or new similar alphabetic component)-->
+<div *ngIf="isAmPm; else digitSegment" class="segment-container">
+  <div class="segment" [ngStyle]="{'background-color': backgroundColor}" >
+    <div class="am" [ngStyle]="{'color': digitColor}">
+      <span [ngClass]="{'on': formattedValue === 'am', 'off': formattedValue === 'pm'}"></span>
+      AM
+    </div>
+    <div class="pm" [ngStyle]="{'color': digitColor}">
+      <span [ngClass]="{'on': formattedValue === 'pm', 'off': formattedValue === 'am'}"></span>
+      PM
+    </div>
+  </div> 
+</div>
+
+<ng-template #digitSegment>
+  <div class="segment-container">
+    <div *ngIf="showSeparator" class="colon">{{separator}}</div>
+    <div class="segment" [ngStyle]="{'background-color': backgroundColor}">
+        <div class="digits" [ngStyle]="{'color': digitColor}">
+          <ig-seven-segment-digit *ngIf="formattedValue[0]" [number]="formattedValue[0]"></ig-seven-segment-digit>
+          <ig-seven-segment-digit *ngIf="formattedValue[1]" [number]="formattedValue[1]"></ig-seven-segment-digit>  
+        </div>
+    </div>    
+  </div>
+</ng-template>

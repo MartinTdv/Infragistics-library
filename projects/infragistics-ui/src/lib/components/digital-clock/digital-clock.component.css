@@ -1,0 +1,28 @@
+.container {
+  display: inline-block;
+  font-size: 3rem;
+  background-color: #333;
+  padding: 20px;
+  border: 5px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.segment-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.segment {
+  width: 30%;
+}
+
+@media (max-width: 350px) {
+  .segment {
+    width: 40%;
+	}
+}
